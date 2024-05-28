@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap');
+@import './_variables.scss';
+@import './_mixins.scss';
+@import './calender';
+@import './utilities';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 10px;
+	overflow: hidden;
+}
+
+body {
+	margin: 0 !important;
+	font-family: 'Poppins', sans-serif !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: $black-color;
+	color: $white-color;
+	scrollbar-width: thin; /* "auto" or "thin" */
+	scrollbar-color: #3f3f3f #3f3f3f; /* scroll thumb and track */
+}
+
+h1 {
+	font-size: 2.5rem;
+	@include preventSelect;
+}
+
+h5 {
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: $white-color;
+	@include preventSelect;
+}
+
+h6 {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: $white-color;
+	@include preventSelect;
+}
+
+body::-webkit-scrollbar {
+	width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+	background: #3f3f3f; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #3f3f3f; /* color of the scroll thumb */
+	border-radius: 20px; /* roundness of the scroll thumb */
+	border: 3px solid #3f3f3f; /* creates padding around scroll thumb */
+}
+
+/* Works on Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #3f3f3f #3f3f3f;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #3f3f3f;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #808080;
+	border-radius: 20px;
+	border: 3px solid #808080;
+}
+
+// Global styles for tineMce starts
+.tox .tox-menu {
+	background-color: black !important;
+}
+.tox-collection__item-icon {
+	> svg {
+		fill: white !important;
+	}
+}
+
+.tox-collection__item-label {
+	color: white !important;
+}
+
+.tox-collection__item-accessory {
+	color: white !important;
+}
+.tox .tox-collection--list .tox-collection__item--active {
+	background-color: grey !important;
+}
+.tox .tox-collection__item-caret svg {
+	fill: white !important	;
+}
+.tox .tox-collection--list .tox-collection__item--enabled {
+	background-color: grey !important;
+}
+.tox .tox-collection__item-checkmark svg,
+.tox .tox-collection__item-icon svg {
+	fill: white !important	;
+}
+.tox-toolbar .tox-toolbar--scrolling {
+	display: none !important;
+}
+// Global styles for tineMce ends
